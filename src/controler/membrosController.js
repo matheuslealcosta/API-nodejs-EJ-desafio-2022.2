@@ -19,12 +19,26 @@ class membrosController {
             .populate('cargos')
             .exec((req, res) => {
             if (err) {
-                res.status(400).send({ messege: `${err.messsage} - Id incorreto` })
+                res.status(400).send({ messege: `${err.messsage} - Id incorreto` });
             }else{
                 res.status(200).send(membros);
             }
         })
     }
+
+    static cadastrarMembro =  (req, res) => {
+        let membro = new membros.$where(req.body);
+
+        membro.save((err) => {
+            if(err){
+                res.status(500).send({message: `${err.message} - falha ao cadastrar novo membro`});
+            }else{
+                res.status(201).send(livro.toJSON());
+            }
+        })
+    }
+
+    
 
 }
 
