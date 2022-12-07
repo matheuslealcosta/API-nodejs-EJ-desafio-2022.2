@@ -50,7 +50,7 @@ class membrosController {
         }
     }
 
-    static excluirLivro = (req, res) => {
+    static excluirMembro = (req, res) => {
         const {id} = req.params;
 
         livros.findByIdAndDelete(id, (err) => {
