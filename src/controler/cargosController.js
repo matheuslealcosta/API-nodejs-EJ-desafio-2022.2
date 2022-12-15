@@ -51,7 +51,7 @@ class cargosController {
             if (err) {
                 res.status(500).send({ message: err.message })
             } else {
-                res.status(200).send({ message: 'cargo removido com sucesso' })
+                res.status(200).send({ message: 'Cargo removido com sucesso' })
             }
         })
     }

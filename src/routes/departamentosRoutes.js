@@ -13,7 +13,7 @@ router
 
     .put("/departamento/:id", departamentosController.atulizarDepartamento)
 
-    .delete("/departamen/:id", departamentosController.excluirDepartamento)
+    .delete("/departamento/:id", departamentosController.excluirDepartamento)
     
 
 export default router;

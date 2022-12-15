@@ -2,10 +2,10 @@
   "name": "desafio-node-code",
   "version": "1.0.0",
   "description": "Desafio de Node 2022.2 - CodeJR",
-  "main": "./src/app.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon ."
+    "dev": "nodemon server.js"
   },
   "license": "MIT",
   "dependencies": {
