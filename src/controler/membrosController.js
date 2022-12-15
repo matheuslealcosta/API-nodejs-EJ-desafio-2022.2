@@ -3,7 +3,7 @@ import membros from "../models/Membro";
 
 class membrosController {
 
-    static listarMemmbros = (req, res) => {
+    static listarMembros = (req, res) => {
         membros.find()
             .populate('departamentos')
             .populate('cargos')
