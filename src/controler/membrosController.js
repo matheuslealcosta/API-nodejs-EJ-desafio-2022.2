@@ -1,3 +1,4 @@
+import departamentos from "../models/Departamento";
 import membros from "../models/Membro";
 
 class membrosController {
@@ -29,11 +30,11 @@ class membrosController {
     static cadastrarMembro = (req, res) => {
         let membro = new membros.$where(req.body);
 
-        membro.save((err) => {
+        membros.save((err) => {
             if (err) {
                 res.status(500).send({ message: `${err.message} - falha ao cadastrar novo membro` });
             } else {
-                res.status(201).send(livro.toJSON());
+                res.status(201).send(membro.toJSON());
             }
         })
     }
@@ -53,7 +54,7 @@ class membrosController {
     static excluirMembro = (req, res) => {
         const {id} = req.params;
 
-        livros.findByIdAndDelete(id, (err) => {
+        membros.findByIdAndDelete(id, (err) => {
             if (err) {
                 res.status(500).send({ message: err.message })
             } else {
